@@ -1,0 +1,13 @@
+PROC C_DRESS_END_POSITION_CX DISPLOF
+;***********程序功能**********
+;*修整结束移动位置
+;****************************
+
+;
+MSG("修整轮运行至结束位置"); ifIsCHS
+G90 G1 V=$AA_SOFTENDP[V]-1 F=INI[61]
+
+;
+
+RET
+

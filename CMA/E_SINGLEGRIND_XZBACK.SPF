@@ -1,0 +1,15 @@
+PROC E_SINGLEGRIND_XZBACK(REAL POSITION) DISPLOF
+;***********程序功能**********
+;*单向磨削后x后退情况
+;POSITION:X后退位置
+;****************************
+
+;
+MSG("砂轮正在退出工件"); ifIsCHS
+G90 G01 X=POSITION-$AC_DRF[X] F=PROCESS[11]*4
+INI[47]=0;磨削中不正常退出标记
+
+;
+
+RET
+

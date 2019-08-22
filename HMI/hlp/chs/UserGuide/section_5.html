@@ -1,0 +1,86 @@
+﻿<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset="UTF-8"/>
+        <title>自动对刀</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    </head>
+    
+    <body>
+        <div class="head1"><a href="index.html">HMI界面参数定义</a>
+            <hr>
+            <div class="head2">自动对刀
+                <hr>
+                <div class="parameterCell">
+                    <table border="1" cellspacing="0" cellpadding="2" width="100%">
+                        <tr>
+                            <td><a class="var_mark" name="S5D1">对刀结果调整</a></td>
+                            <td>推荐设置：根据偏刀情况</td>
+                        </tr>
+                        <tr>
+                            <td>取值范围</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <p class="parameterExplain">
+                        完成自动对刀进行磨削后，根据磨削的偏刀情况，用此参数来调整<br>
+                    </p>
+                </div>
+
+                <!--ifIsExternalBegin-->
+                <div class="parameterCell">
+                    <table border="1" cellspacing="0" cellpadding="2" width="100%">
+                        <tr>
+                            <td><a class="var_mark" name="S5D2">砂轮中心与接近开关重合Z坐标</a></td>
+                            <td>推荐设置：无</td>
+                        </tr>
+                        <tr>
+                            <td>取值范围</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <p class="parameterExplain">
+                        手动开动台面，将接近开关中心对准砂轮齿顶，记录此时Z轴坐标<br>
+                    </p>
+                </div>
+                <!--ifIsKaiGuanAndCeTouCeLiangBegin-->
+                <div class="parameterCell">
+                    <table border="1" cellspacing="0" cellpadding="2" width="100%">
+                        <tr>
+                            <td><a class="var_mark" name="S5D3">砂轮中心与测头中心重合Z坐标</a></td>
+                            <td>推荐设置：无</td>
+                        </tr>
+                        <tr>
+                            <td>取值范围</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <p class="parameterExplain">
+                        手动开动台面，将测头中心对准砂轮齿顶，记录此时Z轴坐标<br>
+                    </p>
+                </div>
+                <div class="parameterCell">
+                    <table border="1" cellspacing="0" cellpadding="2" width="100%">
+                        <tr>
+                            <td><a class="var_mark" name="S5D4">测量-开关距</a></td>
+                            <td>推荐设置：无</td>
+                        </tr>
+                        <tr>
+                            <td>取值范围</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <p class="parameterExplain">
+                        测量接近开关中心到测头中心水平方向距离<br>
+                        如果测头在左开光在有输入正值，反之输入负值<br>
+                    </p>
+                </div>
+                <!--ifIsKaiGuanAndCeTouCeLiangEnd-->
+                <!--ifIsExternalEnd-->
+
+                <!--removed-->
+
+                <!--removed-->
+            </div>
+        </div>
+    </body>
+</html>
