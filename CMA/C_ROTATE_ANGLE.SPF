@@ -18,7 +18,7 @@ IF INI[16]==1
 		STOPRE
 		G4 F0.5
 		M36;夹紧
-		G4 F1
+		G4 F1; ifCloseHydrauilc
 		M74;液压关 ifCloseHydrauilc
 	ENDIF
 ENDIF

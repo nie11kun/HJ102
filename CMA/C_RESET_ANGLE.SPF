@@ -4,7 +4,7 @@ PROC C_RESET_ANGLE DISPLOF
 ;****************************
 
 IF INI[16]==1
-	IF TRUNC($AA_IM[A]*1000)<>0
+	IF TRUNC($AA_IM[A]*1000)<>TRUNC(INI[153]*1000)
 		M73;液压开
 		G4 F1
 		M35;松开
@@ -14,17 +14,17 @@ IF INI[16]==1
 		G4 F1
 ;
 		MSG("螺旋升角置零中"); ifIsCHS
-		IF INI[20]>=0
-			G90 G01 A=-1 F=INI[60]
+		IF INI[20]>=INI[153]
+			G90 G01 A=INI[153]-1 F=INI[60]
 		ELSE
-			G90 G01 A=1 F=INI[60]
+			G90 G01 A=INI[153]+1 F=INI[60]
 		ENDIF
 		G4 F0.5
-		G90 G01 A=0 F=INI[60]
+		G90 G01 A=INI[153] F=INI[60]
 		STOPRE
 		G4 F0.5
 		M36;夹紧
-		G4 F1
+		G4 F1; ifCloseHydrauilc
 		M74;液压关 ifCloseHydrauilc
 	ENDIF
 ENDIF

@@ -12,7 +12,7 @@ IF INI[75]==1;磨削几件后修整标记位
     INI[75]=0;标记位
 
     ;********************
-;
+    F_Z_POSITION(INI[28]);修整初始位置 内螺纹  ifIsInternal
     ;*********************
 
     M9;磨削冷却关
@@ -26,15 +26,20 @@ ENDIF
 IF (TECH_TIME[0]+TECH_TIME[1]+TECH_TIME[2]+TECH_TIME[3]+TECH_TIME[4]==1) OR (INI[72]==1);第一次磨削或者修整后的磨削
     
     ;**********************
-    ;ifIsExternalBegin
-    IF RING[0]==0;螺纹/环形槽加工
-        D_GRIND_INIT_POSITION(INI[6],PROCESS[16],INI[56],INI[55]);外螺纹
-    ELSE
-        D_GRIND_INIT_POSITION(INI[6],PROCESS[16],INI[57],INI[55]);外螺纹
-    ENDIF
-    ;ifIsExternalEnd
-
     ;
+
+    ;ifIsInternalBegin
+    IF RING[0]==0;螺纹/环形槽加工
+        D_GRIND_INIT_POSITION(INI[28],INI[10],INI[56],INI[55]);内螺纹
+        G01 G90 Z=INI[6] F=INI[56]
+    ELSE
+        IF $AA_IM[X]<>INI[10];当前x轴没在中心，砂轮在外面
+            D_GRIND_INIT_POSITION(INI[28],INI[10],INI[56],INI[55]);内螺纹
+            G01 G90 Z=INI[6] F=INI[56]
+        ENDIF
+        G01 G90 Z=INI[6] F=INI[57]
+    ENDIF
+    ;ifIsInternalEnd
     ;*********************
 
 ENDIF
@@ -60,17 +65,12 @@ IF $A_DBB[2]==1;按下退刀键跳转到结束程序
     RET
 ENDIF
 
-;ifIsExternalVWBegin
-IF PROCESS[6]==0;单向/双向
-    WHEN $R[270]==1 DO POS[Z]=INI[6] FA[Z]=INI[56];定位轴启动
-    R270=1;同步动作激活标记
-ENDIF
-;ifIsExternalVWEnd
+;
 
 IF PROCESS[3]==1
 
     ;********************
-;
+    F_Z_POSITION(INI[28]);修整初始位置 内螺纹  ifIsInternal
     ;*********************
 
     M9;磨削冷却关
@@ -83,25 +83,19 @@ IF PROCESS[3]==1
     C_LINESPEED_GRIND;磨削时砂轮速度调节子程序
 ENDIF
 
-;ifIsExternalVWBegin
-IF PROCESS[6]==0;单向/双向
-    WAITP;等待定位轴到位
-    STOPRE;如果不加可能产生报警
-    R270=0;同步动作取消标记
-ENDIF
-;ifIsExternalVWEnd
+;
 
 IF (TECH_TIME[0]+TECH_TIME[1]+TECH_TIME[2]+TECH_TIME[3]+TECH_TIME[4]==TECHNOLOGY[10]+TECHNOLOGY[11]+TECHNOLOGY[12]+TECHNOLOGY[13]+DIY[1]);最后一次结束
     M9;磨削冷却关
 
     ;*********************
     IF RING[0]==0;螺纹/环形槽加工
-        D_GRIND_INIT_POSITION(INI[6],INI[23],INI[56],INI[55]);外螺纹 ifIsExternal
 ;
+        D_GRIND_INIT_POSITION(INI[28],INI[23],INI[56],INI[55]);内螺纹 ifIsInternal
     ELSE
         IF RING[5]==RING[4]-1;最后一槽
-            D_GRIND_INIT_POSITION(INI[6],INI[23],INI[56],INI[55]);外螺纹 ifIsExternal
 ;
+            D_GRIND_INIT_POSITION(INI[28],INI[23],INI[56],INI[55]);内螺纹 ifIsInternal
         ENDIF
     ENDIF
 

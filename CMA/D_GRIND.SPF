@@ -61,13 +61,13 @@ WHILE(WORK[1]<WORK[0])
 			RET
 		ENDIF
 		;*********************
-		E_DOUBLEGRIND_XBACK(PROCESS[16]);外螺纹   ifIsExternal
 ;
+		E_DOUBLEGRIND_XBACK(INI[10]);内螺纹  ifIsInternal
 		;*********************
 	ELSE
 		;*********************
-		E_SINGLEGRIND_XZBACK(PROCESS[16]);外螺纹   ifIsExternal
 ;
+		E_SINGLEGRIND_XZBACK(INI[10]);内螺纹  ifIsInternal
 		;*********************
 		IF $A_DBB[2]==1;返回起点过程中按下退刀键,安全结束程序
 			RET

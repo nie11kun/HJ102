@@ -165,8 +165,8 @@
 85162 0 0 ""  ;
 85163 0 0 ""  ;
 85164 0 0 "Thread Angle"  ;
-85165 0 0 "Measure start.X"  ;ifIsExternal
 ;
+85165 0 0 "Work Center.X"  ;ifIsInternal
 85166 0 0 "Single"  ;
 85167 0 0 "Mass";
 85168 0 0 ""  ;
@@ -313,7 +313,7 @@
 85307 0 0 "Fine Speed"  ;
 85308 0 0 "Rough Feed-Rate"  ;
 85309 0 0 "Fine Feed-Rate"  ;
-85310 0 0 ""  ;
+85310 0 0 "Dress Ang"  ;
 85311 0 0 ""  ;
 85312 0 0 ""  ;
 85313 0 0 ""  ;

@@ -6,30 +6,20 @@ PROC C_OPERATION_RAND DISPLOF
 DEF REAL DR1,DR2,DR3,DR4
 
 ;*********************
-CASE TOOL_SET[19] OF 0 GOTOF DDD0 1 GOTOF DDD1 2 GOTOF DDD2 DEFAULT GOTOF DDD0;外螺纹   ifIsExternal
+;
 ;*********************
 
 DDD0:
 ;
 MSG("正在开至工件起点"); ifIsCHS
 ;*********************
-F_Z_POSITION(INI[6]);外螺纹   ifIsExternal
 ;
+F_Z_POSITION(INI[28]);内螺纹  ifIsInternal
 ;*********************
 GOTOF DDD3
 
 ;*********************
-;ifIsExternalBegin
-DDD1:
 ;
-MSG("正在开至工件中点"); ifIsCHS
-F_Z_POSITION(INI[8]);快速移动到对刀中点
-GOTOF DDD3
-
-DDD2:
-G01 G90 Z=INI[134] F=INI[56];任意点位置
-GOTOF DDD3
-;ifIsExternalEnd
 ;*********************
 
 DDD3:
@@ -38,7 +28,7 @@ MSG("X轴开至对刀起始位"); ifIsCHS
 G01 G90 X=INI[10] F=INI[55];X开至对刀起始位
 
 ;*********************
-;
+F_Z_POSITION(INI[6]);内螺纹  ifIsInternal
 ;*********************
 
 STOPRE

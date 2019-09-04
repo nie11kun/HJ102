@@ -182,8 +182,8 @@
                         根据当前工件决定是否进行锥螺纹磨削<br>
                         输入值为工件单位长度上，半径方向的偏移量<br>
                         例如：100mm的工件长度，小头的直径为20大头直径为30，则锥度输入为(30-20)/2/100<br>
-                        小头往大头磨输入正值，反之为负<br> <!--ifIsExternalLine-->
 <!--removed-->
+                        大头往小头磨输入正值，反之为负<br> <!--ifIsInternalLine-->
                     </p>
                 </div>
                 <div class="parameterCell">
@@ -462,104 +462,57 @@
                     </p>
                 </div>
 
-                <!--removed-->
+                <!--ifIsInternalBegin-->
+                <div class="parameterCell">
+                    <table border="1" cellspacing="0" cellpadding="2" width="100%">
+                        <tr>
+                            <td><a class="var_mark" name="S1D28">工件中心</a></td>
+                            <td>推荐设置：砂轮在工件中心时X坐标</td>
+                        </tr>
+                        <tr>
+                            <td>取值范围</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <p class="parameterExplain">
+                        推荐将此位置设置准确，测量方式：<br>
+                        开动X轴将砂轮接触工件外圆，记录当前X坐标X1，测量当前工件大径大小D1，当前砂轮直径D2<br>
+                        工件中心=X1+D1/2+D2/2
+                    </p>
+                </div>
+                <div class="parameterCell">
+                    <table border="1" cellspacing="0" cellpadding="2" width="100%">
+                        <tr>
+                            <td><a class="var_mark" name="S1D29">工件装夹角度</a></td>
+                            <td>推荐设置：合适上下工件的角度</td>
+                        </tr>
+                        <tr>
+                            <td>取值范围</td>
+                            <td>0~360</td>
+                        </tr>
+                    </table>
+                    <p class="parameterExplain">
+                        程序执行结束后，头架会开到此位置<br>
+                    </p>
+                </div>
+                <div class="parameterCell">
+                    <table border="1" cellspacing="0" cellpadding="2" width="100%">
+                        <tr>
+                            <td><a class="var_mark" name="S1D30">磨削起始位置</a></td>
+                            <td>推荐设置：砂轮开到工件外合适Z轴位置</td>
+                        </tr>
+                        <tr>
+                            <td>取值范围</td>
+                            <td>至少大于工件右端30mm</td>
+                        </tr>
+                    </table>
+                    <p class="parameterExplain">
+                        此位置为磨削过程中需要修整时砂轮出来的位置，需保证砂轮能够安全向后开动<br>
+                    </p>
+                </div>
+                <!--ifIsInternalEnd-->
 
-                <!--ifIsExternalBegin-->
-                <div class="parameterCell">
-                    <table border="1" cellspacing="0" cellpadding="2" width="100%">
-                        <tr>
-                            <td><a class="var_mark" name="S1D5">对刀类型</a></td>
-                            <td>推荐设置：无</td>
-                        </tr>
-                        <tr>
-                            <td>取值范围</td>
-                            <td>首次/二次</td>
-                        </tr>
-                    </table>
-                    <p class="parameterExplain">
-                        首次对刀：砂轮初始开到对刀位置，重新开始对刀<br>
-                        二次对刀：砂轮初始直接开进工件螺纹，只需要通过手轮进行微调<br>
-                    </p>
-                </div>
-                <div class="parameterCell">
-                    <table border="1" cellspacing="0" cellpadding="2" width="100%">
-                        <tr>
-                            <td><a class="var_mark" name="S1D6">对刀位置</a></td>
-                            <td>推荐设置：无</td>
-                        </tr>
-                        <tr>
-                            <td>取值范围</td>
-                            <td>起点/中点/任意点</td>
-                        </tr>
-                    </table>
-                    <p class="parameterExplain">
-                        起点：从工件起点开始对刀<br>
-                        中点：从工件中点开始对刀<br>
-                        任意点：从任意位置开始对刀，对刀位坐标手动输入到下方<br>
-                    </p>
-                </div>
-                <div class="parameterCell">
-                    <table border="1" cellspacing="0" cellpadding="2" width="100%">
-                        <tr>
-                            <td><a class="var_mark" name="S1D7">对刀位</a></td>
-                            <td>推荐设置：无</td>
-                        </tr>
-                        <tr>
-                            <td>取值范围</td>
-                            <td>工件长度范围内</td>
-                        </tr>
-                    </table>
-                    <p class="parameterExplain">
-                        手动模式开动机床将砂轮移动到希望开始对刀的位置，记录当前台面坐标<br>
-                    </p>
-                </div>
-                <div class="parameterCell">
-                    <table border="1" cellspacing="0" cellpadding="2" width="100%">
-                        <tr>
-                            <td><a class="var_mark" name="S1D12">对刀起始位置</a></td>
-                            <td>推荐设置：接近工件外圆处</td>
-                        </tr>
-                        <tr>
-                            <td>取值范围</td>
-                            <td>砂轮在工件外位置</td>
-                        </tr>
-                    </table>
-                    <p class="parameterExplain">
-                        开动X轴，在保证安全情况下，将砂轮尽量接近工件，记录当前X轴坐标<br>
-                    </p>
-                </div>
-                <div class="parameterCell">
-                    <table border="1" cellspacing="0" cellpadding="2" width="100%">
-                        <tr>
-                            <td><a class="var_mark" name="S1D13">磨削安全位置</a></td>
-                            <td>推荐设置：工件外圆外10mm处</td>
-                        </tr>
-                        <tr>
-                            <td>取值范围</td>
-                            <td>砂轮在工件外位置</td>
-                        </tr>
-                    </table>
-                    <p class="parameterExplain">
-                        此位置为工件加工到磨削终点后，X轴后退到此位置，此位置需保证Z轴能够正常安全移动<br>
-                    </p>
-                </div>
-                <div class="parameterCell">
-                    <table border="1" cellspacing="0" cellpadding="2" width="100%">
-                        <tr>
-                            <td><a class="var_mark" name="S1D17">全长锥度补偿</a></td>
-                            <td>推荐设置：根据测量情况</td>
-                        </tr>
-                        <tr>
-                            <td>取值范围</td>
-                            <td>-1~1</td>
-                        </tr>
-                    </table>
-                    <p class="parameterExplain">
-                        根据当前工件加工后测量情况决定是否进行锥度补偿<br>
-                        输入值为半径方向上全长锥度补偿量<br>
-                    </p>
-                </div>
-                <!--ifIsExternalEnd-->
+                <!--removed-->
 
                 <!--removed-->
 
