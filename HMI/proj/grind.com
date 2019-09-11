@@ -23,6 +23,9 @@
 	DEF X_QUIT=(R/-500,500//$85106,$85106,,/WR2/"panel_18_25_chs.png"/"/NC/_N_NC_GD2_ACX/INI[24]"/360,170,202/460,170,60/6/"UserGuide/section_1.html","S1D14");退刀位置
 	DEF Z_INIT=(R/-2000,2000//$85101,$85101,,/WR2/"panel_18_23_chs.png"/"/NC/_N_NC_GD2_ACX/INI[29]"/360,240,202/460,240,60/6/"UserGuide/section_1.html","S1D30");内螺纹时台面起始位置
 
+	DEF QIANMAOSHUA=(I/0,2//$85200,$85200,,/WR2//"/NC/_N_NC_GD2_ACX/INI[13]"/360,270,202/460,270,60/);前毛刷
+	DEF HOUMAOSHUA=(I/0,2//$85201,$85201,,/WR2//"/NC/_N_NC_GD2_ACX/INI[14]"/360,290,202/460,290,60/);后毛刷
+
 	DEF VAR45=(I////WR4//"/NC/_N_NC_GD2_ACX/PROCESS[16]"/0,0,0/0,0,0);精简工艺参数/扩展工艺参数
 
 	DEF QCHECK=(I////WR4//"/Plc/Q113.5"/0,0,0/0,0,0);循环启动Q点检测
