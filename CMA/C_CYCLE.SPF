@@ -11,7 +11,7 @@ ENDIF
 INI[159]=INI[10]+INI[157]*INI[12];当前使用前毛刷磨削位
 INI[160]=INI[10]+INI[158]*INI[13]+INI[156];当前使用后毛刷磨削位
 
-IF PROCESS[6]==0
+IF PROCESS[6]==0;前/后毛刷
     INI[161]=INI[159];当前毛刷位置
 ELSE
     INI[161]=INI[160]

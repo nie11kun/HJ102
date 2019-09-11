@@ -13,7 +13,17 @@ ENDIF
 IF (INI[36]==0) OR (INI[36]==2);砂轮类型选择
     R299=SPEED
     G4 F0.2
-    M13;砂轮启动
+
+    IF PROCESS[6]==0;前/后毛刷
+        M65
+        G4 F0.2
+        M13;砂轮启动
+    ELSE
+        M15
+        G4 F0.2
+        M63;砂轮启动
+    ENDIF
+    
 ELSE
     M1=3 S1=SPEED
 ENDIF
