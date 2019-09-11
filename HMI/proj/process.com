@@ -23,10 +23,10 @@
 	DEF VAR30=(R///$85206,,,/WR2//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[144]"/0,0,0/402,154,60/);精磨速度
 	
 	;砂轮线速度设定
-	DEF VAR37=(R/0,//$85203,,,/WR1//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[161]"/0,0,0/132,203,60//"UserGuide/section_2.html","S2D7");粗磨砂轮线速度
-	DEF VAR38=(R/0,//$85204,,,/WR1//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[162]"/0,0,0/222,203,60//"UserGuide/section_2.html","S2D7");半粗磨砂轮线速度
-	DEF VAR39=(R/0,//$85205,,,/WR1//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[163]"/0,0,0/312,203,60//"UserGuide/section_2.html","S2D7");半精磨砂轮线速度
-	DEF VAR40=(R/0,//$85206,,,/WR1//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[164]"/0,0,0/402,203,60//"UserGuide/section_2.html","S2D7");精磨砂轮线速度
+	DEF VAR37=(R/0,//$85203,,,/WR4//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[161]"/0,0,0/132,203,60//"UserGuide/section_2.html","S2D7");粗磨砂轮线速度
+	DEF VAR38=(R/0,//$85204,,,/WR4//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[162]"/0,0,0/222,203,60//"UserGuide/section_2.html","S2D7");半粗磨砂轮线速度
+	DEF VAR39=(R/0,//$85205,,,/WR4//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[163]"/0,0,0/312,203,60//"UserGuide/section_2.html","S2D7");半精磨砂轮线速度
+	DEF VAR40=(R/0,//$85206,,,/WR4//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[164]"/0,0,0/402,203,60//"UserGuide/section_2.html","S2D7");精磨砂轮线速度
 	
 	;头架转速显示
 	DEF VAR23=(R///$85203,,,/WR2//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[61]"/0,0,0/132,245,60//"UserGuide/section_2.html","S2D8");粗磨头架转速
@@ -286,10 +286,6 @@
 		VAR43.WR=1
 		VAR44.WR=1
 		;砂轮线速度设定
-		VAR37.WR=1
-		VAR38.WR=1
-		VAR39.WR=1
-		VAR40.WR=1
 	END_SUB	
 
 	SUB(DIY_OFF)
@@ -320,10 +316,6 @@
 		VAR43.WR=2
 		VAR44.WR=2
 		;砂轮线速度设定
-		VAR37.WR=2
-		VAR38.WR=2
-		VAR39.WR=2
-		VAR40.WR=2
 	END_SUB
 
 	SUB(Q_DIY_SET)
@@ -383,19 +375,11 @@
 			VAR34.WR=1
 			VAR35.WR=1
 			VAR36.WR=1
-			VAR37.WR=2
-			VAR38.WR=2
-			VAR39.WR=2
-			VAR40.WR=2
 		ELSE
 			VAR33.WR=2
 			VAR34.WR=2
 			VAR35.WR=2
 			VAR36.WR=2
-			VAR37.WR=1
-			VAR38.WR=1
-			VAR39.WR=1
-			VAR40.WR=1
 		ENDIF
 	END_SUB
 
