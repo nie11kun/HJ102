@@ -6,6 +6,7 @@ PROC C_WORKS_CUMU DISPLOF
 IF RING[0]==0;螺纹/环形槽加工
     IF INI[26]<>0;0是单件磨削模式,1是批量磨削模式
         INI[73]=INI[73]+1;磨削工件计数
+        INI[163]=INI[163]+1;当前毛刷计数
     ENDIF
 ENDIF
 
