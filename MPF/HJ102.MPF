@@ -44,7 +44,7 @@ INI[151]=3000;*滚轮最高速度限制
 G94
 DIAMOF
 
-A_GRINDING;主程序调用 ;ifIsNotCenter
+A_JXS_MAIN;主程序调用 ;ifIsNotCenter
 ;
 
 M30
