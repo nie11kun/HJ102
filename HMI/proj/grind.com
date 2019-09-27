@@ -19,8 +19,8 @@
 
 	DEF VAR8=(R3/-2000,2000//$85108,$85108,,/WR2/"panel_18_7_chs.png"/"/NC/_N_NC_GD2_ACX/INI[2]"/360,100,202/460,100,60/6/"UserGuide/section_1.html","S1D10");工件左端
 	DEF VAR9=(R3/-2000,2000//$85109,$85109,,/WR2/"panel_18_8_chs.png"/"/NC/_N_NC_GD2_ACX/INI[3]"/360,120,202/460,120,60/6/"UserGuide/section_1.html","S1D11");工件右端
-	DEF VAR10=(R/-500,500//$85165,$85165,,/WR2/"panel_18_9_chs.png"/"/NC/_N_NC_GD2_ACX/INI[11]"/360,150,202/460,150,60/6/"UserGuide/section_1.html","S1D28");工件中心
-	DEF X_QUIT=(R/-500,500//$85106,$85106,,/WR2/"panel_18_25_chs.png"/"/NC/_N_NC_GD2_ACX/INI[24]"/360,170,202/460,170,60/6/"UserGuide/section_1.html","S1D14");退刀位置
+	DEF VAR10=(R/-1000,1000//$85165,$85165,,/WR2/"panel_18_9_chs.png"/"/NC/_N_NC_GD2_ACX/INI[11]"/360,150,202/460,150,60/6/"UserGuide/section_1.html","S1D28");工件中心
+	DEF X_QUIT=(R/-1000,1000//$85106,$85106,,/WR2/"panel_18_25_chs.png"/"/NC/_N_NC_GD2_ACX/INI[24]"/360,170,202/460,170,60/6/"UserGuide/section_1.html","S1D14");退刀位置
 	DEF Z_INIT=(R/-2000,2000//$85101,$85101,,/WR2/"panel_18_23_chs.png"/"/NC/_N_NC_GD2_ACX/INI[29]"/360,240,202/460,240,60/6/"UserGuide/section_1.html","S1D30");内螺纹时台面起始位置
 
 	DEF MAOSHUAZHUXUAN=(I/0,2//$85200,$85200,,/WR2//"/NC/_N_NC_GD2_ACX/INI[13]"/360,270,202/460,270,60/);毛刷组选
