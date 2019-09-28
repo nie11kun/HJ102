@@ -24,7 +24,9 @@ IF (TECH_TIME[0]+TECH_TIME[1]+TECH_TIME[2]+TECH_TIME[3]+TECH_TIME[4]==1) OR (INI
     S=TECHNOLOGY[60+PROCESS[2]];旋转
     G4 F0.2
     M03;头架旋转
-    G4 F2
+    G4 F1
+
+    M8;磨削冷却开
 
     ;ifIsInternalBegin
         D_GRIND_INIT_POSITION(INI[28],INI[161],INI[56],INI[55]);内螺纹
@@ -35,9 +37,6 @@ IF (TECH_TIME[0]+TECH_TIME[1]+TECH_TIME[2]+TECH_TIME[3]+TECH_TIME[4]==1) OR (INI
 ENDIF
 
 INI[162]=PROCESS[6];当前毛刷选择缓存
-
-M8;磨削冷却开
-
 
 ;
 D_GRIND;螺纹小循环
