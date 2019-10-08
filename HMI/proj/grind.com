@@ -20,7 +20,6 @@
 
 	DEF JSX_X=(R/-800,800//$85129,$85129,,/WR2/"panel_18_25_chs.png"/"/NC/_N_NC_GD2_ACX/INI[24]"/360,110,202/460,110,60/7/"UserGuide/section_1.html","S1D14");机械手停留x
 	DEF JXS_Z=(R/-2000,2000//$85130,$85130,,/WR2/"panel_18_23_chs.png"/"/NC/_N_NC_GD2_ACX/INI[168]"/360,130,202/460,130,60/7/"UserGuide/section_1.html","S1D30");机械手停留z
-	DEF JXS_C=(R/0,360//$85131,$85131,,/WR2/"panel_18_23_chs.png"/"/NC/_N_NC_GD2_ACX/INI[169]"/360,150,202/460,150,60/7/"UserGuide/section_1.html","S1D30");机械手停留c
 
 	DEF MAOSHUAJU=(R/0,800//$85126,$85126,,/WR2//"/NC/_N_NC_GD2_ACX/INI[157]"/360,190,202/460,190,60/);前后毛刷距
 	DEF QIANDANGEJU=(R/0,200//$85127,$85127,,/WR2//"/NC/_N_NC_GD2_ACX/INI[158]"/360,210,202/460,210,60/);前单个毛刷距
