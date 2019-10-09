@@ -1,22 +1,26 @@
 PROC PLCASUP1 DISPLOF
 ;***********程序功能**********
-;*退刀及角度计算程序:
-;*首次对刀 手动对刀 自动对刀 二次对刀 下的C角度及X初始位计算，退刀键的回退动作
-;****************************
 
-DEF REAL DR11,DR12,DR13
-
-IF INI[25]==0;不在磨削程序中退刀就不进行C角度计算
-	GOTOF X_BACK
-ENDIF
-
-STOPRE
-TOOL_SET[20]=$AC_DRF[X];对刀完成时手轮偏置值
-
-INI[10]=INI[10]+TOOL_SET[20];磨削过程中调整X
-
-STOPRE
 DRFOF
 
-RET
+IF $A_DBB[2]<>0;异常退刀
+    G90 G01 Z=INI[155] F=INI[56]
+    G90 G01 X=INI[23] F=INI[54]
+    G90 G01 C=INI[156] F=INI[58]
+ENDIF
+GOTOF ABORT_DELAY
+
+IF $A_DBB[15]<>0;修整位退刀
+    G90 G01 Z=INI[155] F=INI[56]
+    G90 G01 X=INI[10] F=INI[54]
+    G90 G01 C=INI[156] F=INI[58]
+ENDIF
+GOTOF ABORT_DELAY
+
+ABORT_DELAY:
+MSG("请处理...")
+G4 F999999
+GOTOB ABORT_DELAY
+
+M17
 
