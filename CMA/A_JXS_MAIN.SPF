@@ -17,6 +17,12 @@ M85;故障信号复位
 M87;卡盘松开信号复位
 M89;卡盘夹紧信号复位
 
+M95;关门
+WHILE(($A_DBB[24]==0)OR($A_DBB[23]==1))
+    MSG("等待自动门关闭")
+    G4 F0.2
+ENDWHILE
+
 IF ($A_DBB[0]==1) OR ($A_DBB[1]==1) OR (INI[85]<>1);修整/对刀/无机械手
     GOTOF TX;单件加工
 ENDIF
