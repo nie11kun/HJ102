@@ -319,8 +319,8 @@
     <Row6 type="QString" value="C轴旋转"/>
     <Row7 type="QString" value="测量机构1汽缸回退到位"/>
     <Row8 type="QString" value="测量机构1汽缸伸出到位"/>
-    <Row9 type="QString" value="自动门打开开关"/>
-    <Row10 type="QString" value="自动门关闭开关"/>
+    <Row9 type="QString" value="自动门1打开开关"/>
+    <Row10 type="QString" value="自动门1关闭开关"/>
     <Row11 type="QString" value=""/>
     <Row12 type="QString" value="砂轮当前状态"/>
     <Row13 type="QString" value="修整轮当前状态"/>
@@ -333,8 +333,8 @@
     <Row20 type="QString" value="测量机构2汽缸回退到位"/>
     <Row21 type="QString" value="测量机构2汽缸伸出到位"/>
     <Row22 type="QString" value=""/>
-    <Row23 type="QString" value="液压修整器回退到位"/>
-    <Row24 type="QString" value="液压修整器伸出到位"/>
+    <Row23 type="QString" value="自动门2打开开关"/>
+    <Row24 type="QString" value="自动门2关闭开关"/>
     <Row25 type="QString" value=""/>
     <Row26 type="QString" value=""/>
     <Row27 type="QString" value=""/>
