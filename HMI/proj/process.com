@@ -1,9 +1,11 @@
 ;**********************MASK2:工艺参数_批量_基本:panel_2:;**********************
-//M(Mask2/$85021/"panel_2_0_chs.png"/)
+//M(Mask2/$85021//)
 
 	;DEF TECH_PAR_VAR1=(R/%TECH_PAR1///WR1////3,30,115,30)
 	;DEF TECH_GRID_VAR=(R/%TECH_GRID///WR2////115,51,360,210)
 	
+	DEF MAINPIC = (V///,$85202////0,0,600,370/0,0,0)
+
 	;前后砂轮选择
 	DEF VAR10=(I/*0=$85233,1=$85234//$85203,,,/WR1,ac4//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[111]"/0,0,0/132,78,60//"UserGuide/section_2.html","S2D3");
 	DEF VAR11=(I/*0=$85233,1=$85234//$85204,,,/WR1,ac4//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[112]"/0,0,0/222,78,60//"UserGuide/section_2.html","S2D3");
@@ -60,14 +62,14 @@
 	DEF TYPE=(I////WR4//"/NC/_N_NC_GD2_ACX/GRIND[1]"/0,0,0/0,0,0/);磨削类型
 	DEF WHEEL_RUN_MODE=(I//1//WR4//"/NC/_N_NC_GD2_ACX/INI[145]"/0,0,0/0,0,0/);砂轮是否恒转速(0否1是)
 
-	HS1=($85001,ac7,se1);"磨削参数"
-	HS2=($85002,ac7,se3);"工艺参数"
+	HS1=(["\\S_003.png",$85068],ac7,se1,pa0);"磨削参数"
+	HS2=(["\\S_004.png",$85069],ac7,se3,pa0);"工艺参数"
 
 ;
 
 	;
 
-	HS8=($85005,ac7,se1);"返回"
+	HS8=(["\\S_010.png",$85071],ac7,se1,pa0);"返回"
 
 	VS1=($85231,ac7,se3);批量
 
