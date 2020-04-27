@@ -13,16 +13,16 @@
 	DEF VAR13=(I/*0=$85233,1=$85234//$85206,,,/WR1,ac4//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[114]"/0,0,0/402,78,60//"UserGuide/section_2.html","S2D3");	
 
 	;循环次数
-	DEF VAR15=(I///$85203,,,/WR2,ac4//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[121]"/0,0,0/132,104,60//"UserGuide/section_2.html","S2D4");粗磨次数
-	DEF VAR16=(I///$85204,,,/WR2,ac4//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[122]"/0,0,0/222,104,60//"UserGuide/section_2.html","S2D4");半粗磨次数
-	DEF VAR17=(I///$85205,,,/WR2,ac4//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[123]"/0,0,0/312,104,60//"UserGuide/section_2.html","S2D4");半精磨次数
-	DEF VAR18=(I///$85206,,,/WR2,ac4//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[124]"/0,0,0/402,104,60//"UserGuide/section_2.html","S2D4");精磨次数
+	DEF VAR15=(I///$85203,,,/WR2//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[121]"/0,0,0/132,104,60//"UserGuide/section_2.html","S2D4");粗磨次数
+	DEF VAR16=(I///$85204,,,/WR2//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[122]"/0,0,0/222,104,60//"UserGuide/section_2.html","S2D4");半粗磨次数
+	DEF VAR17=(I///$85205,,,/WR2//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[123]"/0,0,0/312,104,60//"UserGuide/section_2.html","S2D4");半精磨次数
+	DEF VAR18=(I///$85206,,,/WR2//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[124]"/0,0,0/402,104,60//"UserGuide/section_2.html","S2D4");精磨次数
 		
 	;磨削速度
-	DEF VAR27=(R///$85203,,,/WR2,ac4//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[141]"/0,0,0/132,129,60/);粗磨速度
-	DEF VAR28=(R///$85204,,,/WR2,ac4//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[142]"/0,0,0/222,129,60/);半粗磨速度
-	DEF VAR29=(R///$85205,,,/WR2,ac4//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[143]"/0,0,0/312,129,60/);半精磨速度
-	DEF VAR30=(R///$85206,,,/WR2,ac4//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[144]"/0,0,0/402,129,60/);精磨速度
+	DEF VAR27=(R///$85203,,,/WR2//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[141]"/0,0,0/132,129,60/);粗磨速度
+	DEF VAR28=(R///$85204,,,/WR2//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[142]"/0,0,0/222,129,60/);半粗磨速度
+	DEF VAR29=(R///$85205,,,/WR2//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[143]"/0,0,0/312,129,60/);半精磨速度
+	DEF VAR30=(R///$85206,,,/WR2//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[144]"/0,0,0/402,129,60/);精磨速度
 	
 	;砂轮线速度设定
 	DEF VAR37=(R/0,//$85203,,,/WR4,ac4//"/NC/_N_NC_GD2_ACX/TECHNOLOGY[161]"/0,0,0/132,203,60//"UserGuide/section_2.html","S2D7");粗磨砂轮线速度
